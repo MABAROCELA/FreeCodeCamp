@@ -9,20 +9,21 @@
 </head>
 
 <body>    
-        <form id="msform" method="post" action:"https://register-demo.freecodecamp.org">
+        <form id="survey-form" method="post" action:"https://register-demo.freecodecamp.org">
         <fieldset class="header">
 
-        <h1>SURVEY</h1>
+        <h1 id="title">SURVEY</h1>
 
-    <p class="subtitle">We would love to know your opinion about us. Please answer the following questions:</p>
+    <p id="description" class="subtitle">We would love to know your opinion about us. Please answer the following questions:</p>
     </fieldset>
 
     <fieldset>     
         <h4>WHO ARE YOU?</h4>
-        <label for="first-name">First Name: <input id="first-name" name="first-name" type="text" class="personal-info" required /></label><br>
-        <label for="last-name">Last Name: <input id="last-name" name="last-name" type="text" class="personal-info" required /></label><br>
-        <label for="email">E-mail: <input id="email" name="email" type="email" class="personal-info" required /></label><br>
-        <label for="birthday">Date of birth <input id="birthday" name="birthday" type="date" min="1900-01-01" class="personal-info" required /></label><br>
+        <label for="name" id="name-label">First Name: <input id="name" name="name-label" type="text" class="personal-info" placeholder="Enter your name" required /></label>
+        <label for="last-name">Last Name: <input id="last-name" name="last-name" type="text" class="personal-info" placeholder="Enter your surname" required /></label>
+        <label for="email-label" id="email-label">E-mail: <input id="email" name="email" type="email" class="personal-info" placeholder="Enter your e-mail" required /></label>
+        <label for="birthday">Date of birth <input id="birthday" name="birthday" type="date" min="1900-01-01" class="personal-info" required /></label>
+        <label for="number-label" id="number-label">Your Age <input name="number" type="number" min="13" max="150" class="personal-info" placeholder="Enter your age" value="age" id="number"  required /></label>
         <label for="country">Your country</label>
             <select id="country" name="country" class="personal-info">
                 <option value class="drop">(Select your country)</option>
@@ -275,23 +276,23 @@
 
         <fieldset>
             <h4>HAVE YOU EVER PURCHASED A PRODUCT FROM OUR WEBSITE?</h4>
-            <label for="purchased"><input id="purchased" type="radio" name="ever-purchased" class="radio"/>Yes</label>
-            <label for="never-purchased"><input id="never-purchased" type="radio" name="ever-purchased" class="radio"/>No</label>
+            <label for="purchased"><input id="purchased" type="radio" name="ever-purchased" class="radio" value="yes"/>Yes</label>
+            <label for="never-purchased"><input id="never-purchased" type="radio" name="ever-purchased" class="radio" value="no"/>No</label>
         </fieldset>
 
         <fieldset>
             <h4>HOW DID YOU HEAR ABOUT OUR WEBSITE?</h4>
-            <label for="television"><input id="television" type="checkbox" name="television" class="checkbox" />Televsion</label>
-            <label for="newspaper"><input id="newspaper" type="checkbox" name="newspaper" class="checkbox"  />Newspaper</label>
-            <label for="radiofm"><input id="radiofm" type="checkbox" name="radiofm" class="checkbox" />Radio</label>
-            <label for="magazine"><input id="magazine" type="checkbox" name="magazine" class="checkbox"  />Magazine</label>
-            <label for="internet"><input id="internet" type="checkbox" name="internet" class="checkbox"  />Internet</label>
+            <label for="television"><input id="television" type="checkbox" name="television" class="checkbox" value="tv" />Televsion</label>
+            <label for="newspaper"><input id="newspaper" type="checkbox" name="newspaper" class="checkbox" value="np" />Newspaper</label>
+            <label for="radiofm"><input id="radiofm" type="checkbox" name="radiofm" class="checkbox" value="rfm"/>Radio</label>
+            <label for="magazine"><input id="magazine" type="checkbox" name="magazine" class="checkbox" value="mz" />Magazine</label>
+            <label for="internet"><input id="internet" type="checkbox" name="internet" class="checkbox" value="int" />Internet</label>
         </fieldset>
 
         <fieldset>
             <h4> WHICH OF THE FOLLOWING FEATURES DO YOU LIKE THE MOST? </h4>
             <h6>Please, give order to these features from the ones you like the most (1) to the least liked ones (4)</h6>
-            <label for="sleep-measure">Measuring sleep  <select name="sleep-measure" id="sleep-measure" class="dropdown">
+            <label for="sleep-measure">Measuring sleep  <select name="sleep-measure" class="dropdown" id="dropdown">
                     <option class="drop" value="">--</option>
                     <option class="drop" value="1">1</option>
                     <option class="drop" value="2">2</option>
@@ -393,11 +394,11 @@
             <h4>DO YOU HAVE ANY COMMENTS OR SUGGESTIONS?</h4>
             <h5>Tell us what's on your mind:</h5>
             <label for="opinion">
-            <textarea id="opinion" name="opinion" rows="3" cols="60"></textarea>
+            <textarea id="opinion" name="opinion" rows="7" cols="30"></textarea>
         </label>
         </fieldset>
 
-        <input type="submit" value="SEND" class="submit" />
+        <input id="submit" type="submit" value="SEND" class="submit" />
     </form>  
 </body>
 </html>
