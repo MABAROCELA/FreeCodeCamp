@@ -2,6 +2,7 @@
   * {
     scroll-behavior: smooth;
   font-family: 'Montserrat';
+  box-sizing: border-box;
 }
 
 main {
