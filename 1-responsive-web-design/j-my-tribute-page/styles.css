@@ -1,5 +1,4 @@
-@media (prefers-reduced-motion: no-preference) {
-  * {
+ * {
     scroll-behavior: smooth;
   font-family: 'Montserrat';
   box-sizing: border-box;
@@ -7,6 +6,7 @@
 
 main {
   padding-top: 6.25rem;
+  overflow: hidden
 }
 
 html{
@@ -109,6 +109,7 @@ header a:hover {
   object-fit: cover;
   filter: saturate(150%);
   box-sizing: content-box;
+  overflow: hidden
 }
 
 #img-caption{
@@ -129,6 +130,7 @@ header a:hover {
   margin-top: .9375rem;
   margin-right: 1.875rem;
   margin-bottom: 0;
+  overflow: hidden
 }
 
 #tribute-link {
@@ -155,6 +157,7 @@ header a:hover {
   height: 15.625rem;
   border-radius: .9375rem;
   filter: grayscale(100%);
+  overflow: hidden
 }
 
 .high-container{
@@ -173,6 +176,7 @@ header a:hover {
   justify-content: center;
   line-height: 2;
   margin: 0.3125rem 0.9375rem;
+  overflow: hidden
 }
 
 .speech{
@@ -203,4 +207,29 @@ footer {
 .copyright p {
   font-size: .875rem;
   color:#F2C0A2;
+}
+
+@media only screen and (max-width: 900px) {
+  .speech {
+    max-width: 25%;
+    max-height: auto;
+  }
+
+  .text-container p, .bulletlist {
+    font-size: 10px;
+  }
+
+  .image-container img {
+    max-height: 250px;
+    max-width: auto;
+  }
+
+.picture{
+  max-width: 30%;
+  max-height: auto;
+}
+
+  header{
+    font-size: 50%;
+  }
 }
